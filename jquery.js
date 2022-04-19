@@ -12,7 +12,7 @@
  * Date: 2021-03-02T17:08Z
  */
 
-// test
+// 2
 ( function( global, factory ) {
 
 	"use strict";
