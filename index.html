@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<head>
+   
+    <title>multi step form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+
+
+<body>
+
+    <form id="msform">
+        <!-- progresssteps -->
+        <ul id="progresssteps">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        <!--you can add more li = more step-->
+        <!--Dont forget  If you added more li = more step  and more fieldset area -->
+        </ul>
+        <!-- fieldsets -->
+        <fieldset class="adim1" id="fieldset1">
+            <h2 class="fs-title">Are you going to put your building to the side or rear?</h2>
+            <h3 class="fs-subtitle">Putting an outbuilding in front of the main elevation of your property (as it was originally built or as it was on 1st July 1948) will require Planning Permission.</h3>
+       <!--p class="help-block">Duruma göre</p-->
+      <!--content 1-->
+            <div style="width: 100%; text-align: center; display: block;">
+            <img src= "img\1.jpg" class="img-responsive imgs">
+            </div>
+            <input id="1" type="button" name="yes" class="next action-button" value="yes"/> 
+            <input id="2"type="button" name="no" class="next action-button" data-toggle="modal" data-target="#exampleModal" Data-keyword="false" data-backdrop="static" value="no" />
+        </fieldset>
+            <!-- fieldsets -->
+      <fieldset class="adim2">
+            <h2 class="fs-title">Do you live in an area which is NOT Designated?</h2>
+            <h3 class="fs-subtitle">Designated land includes areas of outstanding natural beauty, national parks and the Broads, world heritage sites and conservation areas.</h3>
+    <!--content 2-->
+            <div style="width: 100%; text-align: center; display: block;">
+                <img src= "img\2.jpg" class="img-responsive imgs">
+            </div>
+            <input id="3" type="button" name="yes" class="next action-button" value="yes" /> 
+            <input id="4" type="button" name="no" class="next action-button" data-toggle="modal" data-target="#exampleModal" Data-keyword="false" data-backdrop="static" value="no" />
+          <!-- <input type="button" name="previous" class="previous action-button" value="Previous" />
+            <input type="button" name="yes" class="next action-button" value="Yes" />-->
+        </fieldset>
+        <fieldset class="adim3">
+            <h2 class="fs-title">Are you going to put your building on non-listed property?</h2>
+            <h3 class="fs-subtitle"></h3>
+    <!--content 3-->
+            <div style="width: 100%; text-align: center; display: block;">
+                <img src= "img\3.jpg" class="img-responsive imgs">
+            </div>
+            <input id="5" type="button" name="yes" class="next action-button" value="yes" /> 
+            <input id="6" type="button" name="no" class="next action-button" data-toggle="modal" data-target="#exampleModal" Data-keyword="false" data-backdrop="static" value="no" />
+           <!-- <input type="button" name="previous" class="previous action-button" value="Previous" />
+            <input type="button" name="yes" class="next action-button" value="Yes" />-->
+        </fieldset>
+        
+        <fieldset  class="adim4">
+            <h2 class="fs-title">Will it be under 4m in height and under 2.5m at the eaves?</h2>
+            <h3 class="fs-subtitle">A Single Pitched Roof must have an eaves height under 2.5m and be no higher than 3m.</h3>
+    <!--content 4-->
+            <div style="width: 100%; text-align: center; display: block;">
+                <img src= "img\4.jpg" class="img-responsive imgs">
+            </div>
+            <input id="7" type="button" name="yes" class="next action-button" value="yes" /> 
+            <input id="8"type="button" name="no" class="next action-button" value="Don't worry, nne of your buildings exceed these limits!" disabled />
+            <!--  <input type="button" name="previous" class="previous action-button" value="Previous" />
+      
+            <input type="submit" name="submit" class="submit action-button" value="OK" />-->
+        </fieldset>
+
+        <fieldset  class="adim5">
+            <h2 class="fs-title">Will it be under 2.5m high OR over 2m from a boundary?</h2>
+            <h3 class="fs-subtitle">Are you sure? Dunster House are unique in that their Garden Buildings are almost all made to be under 2.5m high so that you don't need to place them over 2m from your boundary. Look our for the "Under 2.5m" label throughout our ranges.</h3>
+    <!--content 4-->
+            <div style="width: 100%; text-align: center; display: block;">
+                <img src= "img\5.jpg" class="img-responsive imgs">
+            </div>
+            <input id="9" type="button" name="yes" class="next action-button" value="yes" /> 
+            <input id="10" type="button" name="no" class="next action-button" data-toggle="modal" data-target="#exampleModal" Data-keyword="false" data-backdrop="static" value="no" />
+            <!--  <input type="button" name="previous" class="previous action-button" value="Previous" />
+      
+            <input type="submit" name="submit" class="submit action-button" value="OK" />-->
+        </fieldset>
+
+        <fieldset  class="adim6">
+            <h2  class="fs-title">Will there be more than 50% left of space in your garden?</h2>
+            <h3 class="fs-subtitle">Outbuildings and other additions such as extensions cannot exceed 50% of the total land around the original house (as it was first built or as it stood on 1st July 1948). Sheds, Log Cabins, Greenhouses and all other kinds of outbuildings and extensions to the original house must be included when calculating the 50% limit.</h3>
+    <!--content 4-->
+            <div style="width: 100%; text-align: center; display: block;">
+                <img src= "img\6.jpg" class="img-responsive imgs">
+            </div>
+            <input id="11" type="button" name="yes" class="next action-button" value="yes" /> 
+            <input id="12"  type="button" name="no" class="next action-button" data-toggle="modal" data-target="#exampleModal" Data-keyword="false" data-backdrop="static" value="no" />
+            <!--  <input type="button" name="previous" class="previous action-button" value="Previous" />
+      
+            <input type="submit" name="submit" class="submit action-button" value="OK" />-->
+        </fieldset>
+
+        <fieldset  class="adim7">
+            <h2 class="fs-title">Will your building go on to a base or deck lower than 300mm</h2>
+            <h3  class="fs-subtitle"></h3>
+    <!--content 4-->
+            <div style="width: 100%; text-align: center; display: block;">
+                <img src= "img\7.jpg" class="img-responsive imgs">
+            </div>
+            <input id="13" type="button" name="yes" class="next action-button" value="yes" /> 
+            <input id="14" type="button" name="no" class="next action-button" data-toggle="modal" data-target="#exampleModal" Data-keyword="false" data-backdrop="static" value="no" />
+            <!--  <input type="button" name="previous" class="previous action-button" value="Previous" />
+      
+            <input type="submit" name="submit" class="submit action-button" value="OK" />-->
+        </fieldset>
+
+        <fieldset  class="adim8">
+            <h2 class="fs-title">Will your building contain NO permanent sleeping accommodation?</h2>
+            <h3 class="fs-subtitle"></h3>
+    <!--content 4-->
+            <div style="width: 100%; text-align: center; display: block;">
+                <img src= "img\8.jpg" class="img-responsive imgs">
+            </div>
+            <input id="15" type="button" name="yes" class="next action-button" value="yes" /> 
+            <input id="16" type="button" name="no" class="next action-button" data-toggle="modal" data-target="#exampleModal" Data-keyword="false" data-backdrop="static" value="no" />
+            <!--  <input type="button" name="previous" class="previous action-button" value="Previous" />
+      
+            <input type="submit" name="submit" class="submit action-button" value="OK" />-->
+        </fieldset>
+
+        <fieldset  class="adim9">
+            <h2 class="fs-title">Will your garden building be free from microwave antenna?</h2>
+            <h3 class="fs-subtitle"></h3>
+    <!--content 4-->
+            <div style="width: 100%; text-align: center; display: block;">
+                <img src= "img\9.jpg" class="img-responsive imgs">
+            </div>
+            <input id="17" type="button" name="yes" class="next action-button" value="yes" /> 
+            <input id="18" type="button" name="no" class="next action-button" data-toggle="modal" data-target="#exampleModal" Data-keyword="false" data-backdrop="static" value="no" />
+            <!--  <input type="button" name="previous" class="previous action-button" value="Previous" />
+      
+            <input type="submit" name="submit" class="submit action-button" value="OK" />-->
+        </fieldset>
+
+
+
+       
+       
+
+
+
+       <fieldset  class="resultOfNo">
+           <h1 style="background-color: 2ECC71;">Success</h1>
+           <div style="width: 100%; text-align: center; display: block;">
+                 <img src= "img\final.jpg"  class="img-responsive imgs">
+            </div>
+           <h2 class="fs-title">Wasn’t that simple! Thanks to a combination of smart choices by yourself and some clever design features by Dunster House, your building will be permitted development.</h2>
+            <h3 class="fs-subtitle">
+                This is our best interpretation of what constitutes permitted development and therefore does not need planning permission. Tens of Thousands of customers have ordered Dunster House buildings and have not needed planning permission, however each situation can be unique – you can contact your local planning office if you want to check in your individual circumstances.
+            </h3>
+            
+            
+        </fieldset>
+
+    </form>
+
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <h2 class="fs-title">You may need planning permission but, don’t panic!</h2>
+                <h3 class="fs-subtitle">
+                    you with the process. Please note that each local planning office may request different information and the plans we provide 
+                    are of the product only. We do not provide plans or offer a service of plans showing the product in situ on your property. 
+                    If you are unsure please contact your local planning office. You will need to contact your local planning office who will be able to guide you further and assist 
+                </h3>
+                   
+            </div>
+            <div class="modal-footer">
+            
+              <button type="button" onclick="location.href='index.html'" class="btn btn-primary">Back to the start</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+
+  
+    <script src="jquery.js"></script>
+    <script src="jquery.easing.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+   
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+    
+    <script src="multiStep.js"></script>
+
+
+       
+
+
+</body>
+
+</html>
+
+

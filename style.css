@@ -1,0 +1,205 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/*custom font*/
+/*basic reset*/
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+  background: #fff;
+}
+body {
+  font-family: "Open Sans", arial, verdana;
+}
+/*form styles*/
+#msform {
+  width: auto;
+  margin: 50px auto;
+  text-align: center;
+  position: relative;
+}
+#msform fieldset {
+  background: white;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  width: 80%;
+  margin: 0 10%;
+  /*stacking fieldsets above each other*/
+
+  position: absolute;
+}
+/*Hide all except first fieldset*/
+#msform fieldset:not(:first-of-type) {
+  display: none;
+}
+/*inputs*/
+#msform input,
+#msform textarea {
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: montserrat;
+  color: #2C3E50;
+  font-size: 13px;
+}
+/*buttons*/
+#msform .action-button {
+  width: 100px;
+  background: #67d5bf;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  border-radius: 1px;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+#msform .action-button:hover,
+#msform .action-button:focus {
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #67d5bf;
+}
+/*headings*/
+.fs-title {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #63a2cb;
+  margin-bottom: 10px;
+}
+.fs-subtitle {
+  font-weight: normal;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+/*progresssteps*/
+#progresssteps {
+  margin-bottom: 30px;
+  overflow: hidden;
+  /*CSS counters to number the steps*/
+
+  counter-reset: step;
+}
+#progresssteps li {
+  list-style-type: none;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 9px;
+  width: 11%;
+  float: left;
+  position: relative;
+}
+#progresssteps li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 20px;
+  line-height: 20px;
+  display: block;
+  font-size: 10px;
+  color: #000;
+  background: #ccc;
+  border-radius: 3px;
+  margin: 0 auto 5px auto;
+}
+/*progresssteps connectors*/
+#progresssteps li:after {
+  content: '';
+  width: 93%;
+  height: 2px;
+  background: #ccc;
+  position: absolute;
+  left: -45.4%;
+  top: 9px;
+  /*
+  z-index: 1;<-- now its ontop of the number */ 
+  /*put it behind the numbers*/
+
+
+
+
+}
+#progresssteps li:first-child:after {
+  /*connector not needed before the first step*/
+
+  content: none;
+}
+/*marking active/completed steps green*/
+/*The number of the step and the connector before it = green*/
+#progresssteps li.active:before,
+#progresssteps li.active:after {
+  background: #67d5bf;
+  color: #000;
+}
+.help-block {
+  font-size: .8em;
+  color: #7c7c7c;
+  text-align: left;
+  margin-bottom: .5em;
+}
+/*fixed footer*/
+.webdoktoru{ position: fixed;left: 0;bottom: 0;width: 100%;background-color: #555;color: white;text-align: center;}.webdoktoru a{text-decoration:none; color:white; font-size:2rem;}.webdoktoru a:hover{text-decoration:none; color:gray}
+
+/*placeholder and icon & anim*/
+.form-label {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  color: #999;
+  background-color: #fff;
+  z-index: 10;
+  transition: transform 150ms ease-out, font-size 150ms ease-out;
+}
+.focused .form-label {
+  transform: translateY(-125%);
+  font-size: 0.75em;
+}
+.form-input {
+  position: relative;
+  padding: 12px 0px 5px 0;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  box-shadow: 0 1px 0 0 #e5e5e5;
+  transition: box-shadow 150ms ease-out;
+}
+.form-input:focus {
+  box-shadow: 0 2px 0 0 blue;
+}
+.form-input.filled {
+  box-shadow: 0 2px 0 0 lightgreen;
+}
+/*my css*/
+
+.pups {
+  display: none;
+border: 1px solid #ccc;
+background-color: #eee;
+width: 400px;
+margin: 0 auto;
+padding: 20px;
+-webkit-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.26);
+-moz-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.26);
+box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.26);
+}
+
+.imgs {
+  width: 55%;
+}
+
+@media screen and (max-width: 550px) {
+  #progresssteps li:after {
+    width: 75%;
+    left: -29.4%;
+  }
+
+  .imgs {
+    width: 100%;
+  }
+ 
+}
